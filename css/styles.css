@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+
+body {
+    min-height: 100vh;
+    background-color:#34db7a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-container {
+    background-color: white;
+    width: 400px;
+    height: 260px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.box-container.active {
+     height: 500px;
+}
+
+.title {
+    font-size: 25px;
+    margin: 15px;
+}
+
+.subtitle {
+    font-size: 12px;
+    color: grey;
+}
+
+#qrGenerator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 120px;
+    margin: 20px;
+}
+
+#qrgenerator-input {
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    border: 0.8px solid grey;
+    padding: 1rem;
+}
+
+#qrgenerator-submit {
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    border: 0.8px solid grey;
+    background-color: rgb(0, 81, 0);
+    color: white;
+    font-size: 17px;
+    opacity: 0.9;
+    transition: .4s;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#qrgenerator-submit:hover{
+    
+    opacity: 1;
+}
+
+#qrcode-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.box-container.active #qrcode-result {
+   opacity: 1;
+}
+
+
+
