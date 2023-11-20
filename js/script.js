@@ -20,6 +20,10 @@ const generateQrcode = () => {
     })
 }
 
+const selectText = () => {
+    text.select();
+
+}
 // Eventos
 
 create.addEventListener("click", (e) => {
@@ -38,5 +42,9 @@ text.addEventListener("keyup", () => {
         container.classList.remove("active")
         create.innerHTML = "Gerar Código"
     }
+})
+
+text.addEventListener("click", () => {
+    selectText();
 })
 
