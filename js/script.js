@@ -18,8 +18,6 @@ const generateQrcode = () => {
         container.classList.add("active")
         create.innerHTML = "Código Gerado!"
     })
-
-    text.value = "";
 }
 
 // Eventos
@@ -30,6 +28,15 @@ create.addEventListener("click", (e) => {
 })
 
 text.addEventListener("keydown", (e) => {
-   console.log(e);
+   if(e.code === "Enter") {
+    generateQrcode();
+   }
+})
+
+text.addEventListener("keyup", () => {
+    if(!text.value) {
+        container.classList.remove("active")
+        create.innerHTML = "Gerar Código"
+    }
 })
 
